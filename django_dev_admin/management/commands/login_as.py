@@ -1,15 +1,7 @@
-import sys
-from django.core.management.base import BaseCommand, CommandError
-from django_dev_admin.middleware import generate_token
-from django.db.models import Q
-from django.urls import reverse
+from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from ._logic import login_as_user
-from django.contrib.auth.management.commands.createsuperuser import (
-    Command as CreateCommand,
-)
 from django.core.management import call_command
-from django.db import DEFAULT_DB_ALIAS
 
 User = get_user_model()
 
@@ -28,9 +20,10 @@ class Command(BaseCommand):
             print(f"USER '{data}' does not exists.")
             answer = input("Would you like to create? [Y/n]: ")
             if answer == "Y" or answer == "y":
-                call_command("createsuperuser", username=data)
+                opts = {User.USERNAME_FIELD: data}
+                call_command("createsuperuser", **opts)
                 try:
-                    user = User.objects.get(username=data)
+                    user = User.objects.get(**opts)
                 except:
                     print(f"USER '{data}' does not exists.")
                     return
