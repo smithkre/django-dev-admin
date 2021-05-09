@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="django-querycount",
+    name="django-dev-admin",
     version="0.1.1",
     author="Smith Krengkrud",
     author_email="smith.kre@gmail.com",
