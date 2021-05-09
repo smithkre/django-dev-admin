@@ -47,6 +47,14 @@ If you are not using default development hostname and port. Please put this opti
 DEFAULT_DEV_SERVER = "http://localhost:8000"
 ```
 
+## Use command
+
+```
+python manage.py login_as
+
+python manage.py login_as -u <username>
+```
+
 ## Production
 
 Please disable this module in production
