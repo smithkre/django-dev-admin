@@ -1,14 +1,31 @@
 # Django Dev Admin
 
-|version| |license|
+[![PyPI version](https://badge.fury.io/py/django-dev-admin.svg)](https://badge.fury.io/py/django-dev-admin)
 
 This project gives you a middleware that allow you to login to any user via django command.
 
 ## Installation
 
-pip install django-dev-admin
+1. Install
 
-Just add `django_dev_admin.middleware.DevAdminMiddleware` to your `MIDDLEWARE` after `django.contrib.sessions.middleware.SessionMiddleware`
+`pip install django-dev-admin`
+
+2. Add `django_dev_admin` to your `INSTALLED_APPS`
+
+```
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    ...,
+    "django_dev_admin",
+]
+```
+
+3. Add `django_dev_admin.middleware.DevAdminMiddleware` to your `MIDDLEWARE` after `django.contrib.sessions.middleware.SessionMiddleware`
 
 ```
 MIDDLEWARE = [
