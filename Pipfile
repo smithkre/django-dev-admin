@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "==2.0"
+bump2version = "*"
 
 [dev-packages]
 black = "*"
