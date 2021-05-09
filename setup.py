@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="django-querycount",
-    version="0.1.0",
+    version="0.1.1",
     author="Smith Krengkrud",
     author_email="smith.kre@gmail.com",
     description=("Allow you to login to any user via django command."),
