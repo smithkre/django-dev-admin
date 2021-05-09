@@ -1,5 +1,12 @@
 from setuptools import setup
 
+# read the contents of your README file
+from os import path
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
+
 setup(
     name="django-dev-admin",
     version="0.1.1",
@@ -15,7 +22,8 @@ setup(
     packages=[
         "django_dev_admin",
     ],
-    long_description="This project gives you a middleware that allow you to login to any user via django command.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     classifiers=[
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
