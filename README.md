@@ -8,7 +8,9 @@ This project gives you a middleware that allow you to login to any user via djan
 
 1. Install
 
-`pip install django-dev-admin`
+```
+pip install django-dev-admin
+```
 
 2. Add `django_dev_admin` to your `INSTALLED_APPS`
 
