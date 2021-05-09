@@ -5,7 +5,9 @@ setup(
     version="0.1.1",
     author="Smith Krengkrud",
     author_email="smith.kre@gmail.com",
-    description=("Allow you to login to any user via django command."),
+    description=(
+        "A Django app to help developers login to any user via django command."
+    ),
     install_requires=[],
     license="BSD 3",
     keywords="django dev admin helper",
