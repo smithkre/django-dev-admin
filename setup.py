@@ -9,7 +9,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="django-dev-admin",
-    version="1.0.1",
+    version="1.1.0",
     author="Smith Krengkrud",
     author_email="smith.kre@gmail.com",
     description=(
